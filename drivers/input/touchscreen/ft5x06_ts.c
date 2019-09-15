@@ -280,9 +280,9 @@ static int ft5x06_ts_start(struct device *dev);
 static int ft5x06_ts_stop(struct device *dev);
 
 extern void do_sync(void);
-struct ft5x06_ts_data *ft5x06_ts = NULL;
+struct ft5x06_ts_data *screen_suspend_check = NULL;
 bool is_touch_screen_suspended(void){
-	return ft5x06_ts->suspended;
+	return screen_suspend_check->suspended;
 }
 
 static struct sensors_classdev __maybe_unused sensors_proximity_cdev = {
